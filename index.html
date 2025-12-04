@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebek Cak Kholiq - Spesialis Bebek Goreng & Bakar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+            <img src="img/Logo.png" width="70" height="70">
+                </i> <span>Bebek Cak Kholiq</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#outlets">Outlet</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <!-- Added cart button in navbar -->
+            <button class="cart-button" id="cartButton" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <img src="IMG/PAKET PAMER AYAM KAMPUNG.jpg" alt="Delicious crispy fried duck with sambal and fresh vegetables on traditional Indonesian plate" class="hero-image">
+        <div class="hero-content">
+            <h1 class="hero-title">Bebek Cak Kholiq</h1>
+            <p class="hero-subtitle">Spesialis Bebek Goreng & Bakar Terenak di Yogyakarta & Purwokerto</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+                <a href="https://wa.me/62895347540761?text=Halo%20Bebek%20Cak%20Kholiq,%20saya%20ingin%20memesan" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tentang Kami</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="IMG/PAKET AYAM GORENG KOSEK.jpg" alt="Traditional Indonesian restaurant interior with wooden furniture and warm lighting ambiance">
+                </div>
+                <div class="about-text">
+                    <h3>Kelezatan Bebek Autentik Sejak Tahun 2010</h3>
+                    <p>Bebek Cak Kholiq adalah rumah makan yang menghadirkan cita rasa autentik bebek goreng dan bebek bakar dengan bumbu khas yang telah diwariskan turun-temurun. Kami berkomitmen untuk menyajikan hidangan berkualitas tinggi dengan bahan-bahan segar pilihan.</p>
+                    <p>Dengan resep rahasia dan proses memasak yang teliti, setiap hidangan bebek kami menghadirkan tekstur yang renyah di luar namun lembut di dalam, dilengkapi dengan sambal yang pedas menggugah selera.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bahan Segar & Berkualitas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Resep Rahasia Turun Temurun</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Harga Terjangkau</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pelayanan Ramah & Cepat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section class="specialties">
+        <div class="container">
+            <div class="section-header">
+                <h2>Spesialisasi Kami</h2>
+                <div class="divider"></div>
+                <p>Hidangan bebek berkualitas dengan cita rasa yang tak terlupakan</p>
+            </div>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Bebek Goreng Kremes</h3>
+                    <p>Bebek goreng dengan kremesan renyah yang gurih, digoreng hingga sempurna dengan bumbu meresap hingga ke dalam</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <i class="fas fa-pepper-hot"></i>
+                    </div>
+                    <h3>Bebek Bakar Madu</h3>
+                    <p>Bebek bakar dengan olesan madu dan bumbu khas yang menghasilkan rasa manis pedas yang sempurna</p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sambal Khas</h3>
+                    <p>Berbagai pilihan sambal khas mulai dari sambal ijo, sambal merah, hingga sambal matah yang fresh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Menu Favorit Kami</h2>
+                <div class="divider"></div>
+                <p>Pilihan menu bebek terlezat untuk Anda</p>
+            </div>
+            <div class="menu-grid">
+                <!-- Menu Item 1 -->
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="IMG/PAKET PAMER AYAM KAMPUNG.jpg" alt="Crispy golden fried duck with crunchy kremes topping served with steamed rice and sambal">
+                        <div class="menu-badge">Best Seller</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>PAKET PAMER AYAM KAMPUNG</h3>
+                        <p>Ayam Kampung goreng rempah yang renyah dan gurih, nasi putih, lalapan, sayur asem dan sambal pilihan</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 50.700</span>
+                            <!-- Replaced order button with quantity controls -->
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity">0</span>
+                                <button class="qty-btn" onclick="increaseQuantity(this, 'Bebek Goreng Kremes', 35000)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="IMG/PAKET PAMER AYAM.jpg">
+                        <div class="menu-badge">Recommended</div>
+                    </div>
+                    <div class="menu-content">
+                        <h3>PAKET PAMER AYAM</h3>
+                        <p>Ayam goreng rempah yang renyah dan gurih, nasi putih, lalapan, sayur asem dan sambal pilihan</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 43.000</span>
+                            <!-- Replaced order button with quantity controls -->
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity">0</span>
+                                <button class="qty-btn" onclick="increaseQuantity(this, 'Bebek Bakar Madu', 38000)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="IMG/PAKET PAMER BEBEK.jpg">
+                    </div>
+                    <div class="menu-content">
+                        <h3>PAKET PAMER BEBEK</h3>
+                        <p>Bebek goreng rempah yang renyah dan gurih, nasi putih, lalapan, sayur asem dan sambal pilihan</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 58.400</span>
+                            <!-- Replaced order button with quantity controls -->
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity">0</span>
+                                <button class="qty-btn" onclick="increaseQuantity(this, 'Bebek Goreng Sambal Merah', 36000)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="IMG/KEROYOKAN AYAM KAMPUNG (1).jpg">
+                    </div>
+                    <div class="menu-content">
+                        <h3>PAKET KROYOKA AYAM KAMPUNG</h3>
+                        <p>Ayam kampung, bakso, telor, tempe, terong/kobis, sambal lalap, nasi</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 64.600</span>
+                            <!-- Replaced order button with quantity controls -->
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity">0</span>
+                                <button class="qty-btn" onclick="increaseQuantity(this, 'Bebek Goreng Sambal Ijo', 36000)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="IMG/kroyokan ayam(1).jpg" alt="Half portion fried duck perfect size with rice vegetables and sambal on banana leaf">
+                    </div>
+                    <div class="menu-content">
+                        <h3>PAKET KEROYOKAN AYAM</h3>
+                        <p>Ayam biasa, bakso, telor, tempe, terong/kobis, sambal lalap, nasi</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 56.900</span>
+                            <!-- Replaced order button with quantity controls -->
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity">0</span>
+                                <button class="qty-btn" onclick="increaseQuantity(this, 'Paket Bebek Setengah', 25000)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="menu-card">
+                    <div class="menu-image">
+                        <img src="IMG/KEROYOKAN AYAM KAMPUNG (2).jpg" alt="Half portion fried duck perfect size with rice vegetables and sambal on banana leaf">
+                    </div>
+                    <div class="menu-content">
+                        <h3>PAKET KEROYOKAN BEBEK</h3>
+                        <p>Ayam biasa, bakso, telor, tempe, terong/kobis, sambal lalap, nasi</p>
+                        <div class="menu-footer">
+                            <span class="price">Rp 73.800</span>
+                            <!-- Replaced order button with quantity controls -->
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="decreaseQuantity(this)">-</button>
+                                <span class="quantity">0</span>
+                                <button class="qty-btn" onclick="increaseQuantity(this, 'Paket Keluarga', 150000)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Menu Items -->
+            <div class="additional-menu">
+                <h3>Menu Tambahan</h3>
+                <div class="additional-grid">
+                    <div class="additional-item">
+                        <div>
+                            <span>Es Teh Manis</span>
+                            <span class="price">Rp 5.000</span>
+                        </div>
+                        <!-- Added quantity controls for additional items -->
+                        <div class="quantity-controls-small">
+                            <button class="qty-btn-small" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="qty-btn-small" onclick="increaseQuantity(this, 'Es Teh Manis', 5000)">+</button>
+                        </div>
+                    </div>
+                    <div class="additional-item">
+                        <div>
+                            <span>Es Jeruk</span>
+                            <span class="price">Rp 7.000</span>
+                        </div>
+                        <!-- Added quantity controls for additional items -->
+                        <div class="quantity-controls-small">
+                            <button class="qty-btn-small" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="qty-btn-small" onclick="increaseQuantity(this, 'Es Jeruk', 7000)">+</button>
+                        </div>
+                    </div>
+                    <div class="additional-item">
+                        <div>
+                            <span>Nasi Tambahan</span>
+                            <span class="price">Rp 5.000</span>
+                        </div>
+                        <!-- Added quantity controls for additional items -->
+                        <div class="quantity-controls-small">
+                            <button class="qty-btn-small" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="qty-btn-small" onclick="increaseQuantity(this, 'Nasi Tambahan', 5000)">+</button>
+                        </div>
+                    </div>
+                    <div class="additional-item">
+                        <div>
+                            <span>Sambal Extra</span>
+                            <span class="price">Rp 3.000</span>
+                        </div>
+                        <!-- Added quantity controls for additional items -->
+                        <div class="quantity-controls-small">
+                            <button class="qty-btn-small" onclick="decreaseQuantity(this)">-</button>
+                            <span class="quantity">0</span>
+                            <button class="qty-btn-small" onclick="increaseQuantity(this, 'Sambal Extra', 3000)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outlets Section -->
+    <section id="outlets" class="outlets">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lokasi Outlet Kami</h2>
+                <div class="divider"></div>
+                <p>Kunjungi outlet terdekat di kota Anda</p>
+            </div>
+            
+            <div class="outlets-container">
+                <!-- Yogyakarta Outlets -->
+                <div class="city-section">
+                    <h3 class="city-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Yogyakarta
+                    </h3>
+                    <div class="outlets-grid">
+                        <div class="outlet-card">
+                            <div class="outlet-image">
+                                <img src="IMG/cabang sinduadi.png" alt="Modern duck restaurant storefront with red signage and outdoor seating area in Yogyakarta">
+                            </div>
+                            <div class="outlet-content">
+                                <h4>Bebek Cak Kholiq - Sinduadi</h4>
+                                <div class="outlet-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Jl. Tirta Marta, Gemawang, Sinduadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55284</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Buka: 10.00 - 22.00 WIB</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-phone"></i>
+                                    <p>0819-90500600</p>
+                                </div>
+                                <a href="https://maps.app.goo.gl/Tw7G93jwQvPWMUHCA" target="_blank" class="btn btn-map">
+                                    <i class="fas fa-directions"></i> Lihat Peta
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="outlet-card">
+                            <div class="outlet-image">
+                                <img src="IMG/cabang pakuwon.png" alt="Cozy duck restaurant at street corner with traditional Indonesian architectural elements">
+                            </div>
+                            <div class="outlet-content">
+                                <h4>Bebek Cak Kholiq-Pakuwon Mall</h4>
+                                <div class="outlet-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Cak Kholiq Hartono Mall, Jl. Ring Road Utara Jl. Kaliwaru, Sanggrahan, Condong Catur, Depok, Sleman Regency, Special Region of Yogyakarta 55281</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Buka: 10.00 - 22.00 WIB</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-phone"></i>
+                                    <p>0819-90500600</p>
+                                </div>
+                                <a href="https://maps.app.goo.gl/ywus7ukh1WcQSvzM6" target="_blank" class="btn btn-map">
+                                    <i class="fas fa-directions"></i> Lihat Peta
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="outlet-card">
+                            <div class="outlet-image">
+                                <img src="IMG/Cabang Soragan.png" alt="Busy duck restaurant in downtown area with parking lot and bright lighting">
+                            </div>
+                            <div class="outlet-content">
+                                <h4>Bebek Cak Kholiq - Soragan</h4>
+                                <div class="outlet-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Soragan, Ngestiharjo, Kasihan, Bantul Regency, Special Region of Yogyakarta 55184</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Buka: 10.00 - 22.00 WIB</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-phone"></i>
+                                    <p>0819-90500600</p>
+                                </div>
+                                <a href="https://maps.app.goo.gl/CfZwNgzBgRy6yYuq7" target="_blank" class="btn btn-map">
+                                    <i class="fas fa-directions"></i> Lihat Peta
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purwokerto Outlets -->
+                <div class="city-section">
+                    <h3 class="city-title">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Purwokerto
+                    </h3>
+                    <div class="outlets-grid">
+                        <div class="outlet-card">
+                            <div class="outlet-image">
+                                <img src="IMG/CABANG OVIS.png" alt="Traditional duck restaurant with bamboo decorations and garden setting in Purwokerto">
+                            </div>
+                            <div class="outlet-content">
+                                <h4>Bebek Cak Kholiq - Cabang Purwokerto LOR</h4>
+                                <div class="outlet-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Jl. Overste Isdiman, Kebondalem, Purwokerto Lor, Kec. Purwokerto Tim.,
+                                         Kabupaten Banyumas, Jawa Tengah 53114</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Buka: 10.00 - 22.00 WIB</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-phone"></i>
+                                    <p>0281-456789</p>
+                                </div>
+                                <a href="https://maps.app.goo.gl/Z2Bi9nJUMrXHTJ7t7" target="_blank" class="btn btn-map">
+                                    <i class="fas fa-directions"></i> Lihat Peta
+                                </a>
+                            </div>
+                        </div>
+
+                     <!-- <div class="outlet-card">
+                            <div class="outlet-image">
+                                <img src="https://placehold.co/400x250?text=Spacious+duck+restaurant+with+family+friendly+dining+area+and+traditional+decor" alt="Spacious duck restaurant with family friendly dining area and traditional decor">
+                            </div>
+                            <div class="outlet-content">
+                                <h4>Bebek Cak Kholiq - Cabang Purwokerto Selatan</h4>
+                                <div class="outlet-info">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p>Jl. HR Bunyamin No. 123, Grendeng, Purwokerto</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-clock"></i>
+                                    <p>Buka: 10.00 - 22.00 WIB</p>
+                                </div>
+                                <div class="outlet-info">
+                                    <i class="fas fa-phone"></i>
+                                    <p>0281-567890</p>
+                                </div>
+                                <a href="https://maps.google.com/?q=Jl.+HR+Bunyamin+No.+123+Grendeng+Purwokerto" target="_blank" class="btn btn-map">
+                                    <i class="fas fa-directions"></i> Lihat Peta
+                                </a>
+                            </div>
+                        </div>-->  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hubungi Kami</h2>
+                <div class="divider"></div>
+                <p>Kami siap melayani Anda</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+62 819-9050-0600</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Bebekcakkholiqkitchen@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Setiap Hari: 10.00 - 22.00 WIB</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h4>Ikuti Kami</h4>
+                        <div class="social-icons">
+                            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <h3>Pesan Sekarang!</h3>
+                    <p>Nikmati kelezatan bebek kami dengan memesan melalui WhatsApp</p>
+                    <a href="https://wa.me/62895347540761?text=Halo%20Bebek%20Cak%20Kholiq,%20saya%20ingin%20memesan" class="btn btn-whatsapp-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><i class=>
+                        <img src="IMG/papan logo.jpg" width="200" height="50">
+                    </h3>
+                    <p>Spesialis Bebek Goreng & Bakar Terenak</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Bebek Cak Kholiq. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Added shopping cart sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>
+                <i class="fas fa-shopping-cart"></i>
+                Keranjang Belanja
+            </h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Keranjang belanja Anda masih kosong</p>
+                <small>Yuk, pilih menu favorit Anda!</small>
+            </div>
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">Rp 0</span>
+            </div>
+            <button class="btn-checkout" onclick="checkoutWhatsApp()" id="checkoutBtn" disabled>
+                <i class="fab fa-whatsapp"></i>
+                Pesan via WhatsApp
+            </button>
+        </div>
+    </div>
+    
+    <!-- Added cart overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/62895347540761?text=Halo%20Bebek%20Cak%20Kholiq,%20saya%20ingin%20memesan" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
