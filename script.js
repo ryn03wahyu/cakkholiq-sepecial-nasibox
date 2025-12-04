@@ -307,3 +307,16 @@ window.addEventListener("scroll", () => {
 })
 
 console.log("Bebek Cak Kholiq Website with Shopping Cart - Ready! 🦆🛒")
+
+document.addEventListener("click", function (e) {
+    const navMenu = document.querySelector(".nav-menu");
+    const hamburger = document.querySelector(".hamburger");
+
+    // Jika menu sedang terbuka
+    if (navMenu.classList.contains("active")) {
+        // Jika kliknya bukan pada menu dan bukan pada tombol hamburger
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            navMenu.classList.remove("active");
+        }
+    }
+});
